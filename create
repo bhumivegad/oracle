@@ -56,7 +56,56 @@ yyyy'), 1300, null, 10);
 
 select * from show;
 
-select count (*) from show
+
 describe show;
-select emp_no from show;
-select dept from show;
+
+select * from tab;
+
+select empno from emp;
+
+select ename, job from emp;
+
+select empno, comm from emp; 
+
+Select empno, mgr from emp;
+
+Select deptno from dept;
+
+select empno,ename,job,mrg from emp;
+
+select ename,mgr from emp;
+
+select ename,deptno from emp;
+
+select deptno,ename,sal,job from emp;
+
+select deptno,dname from dept;
+
+select loc from dept;
+
+select dname,loc from dept;
+
+basic query:2
+
+select * from emp where job='MNAGER';
+
+select * from emp where job='PRESIDENT';
+
+select * from emp where job='MANAGER' or job='CLARK';
+
+select * from emp where  job='MANAGER' and deptno=10;
+
+select * from emp where deptno=10;
+
+select * from emp where deptno in (20,30,40)and job <>'MANAGER';
+
+select * from emp where (job='MANAGER' and deptno=10) or job='ANALYST';
+
+select * from emp where job not in ('PRESIDENT','ANALYST','SALESMAN');
+
+select * from emp where job='CLARK' and deptno=10;
+
+
+
+
+
