@@ -105,6 +105,51 @@ select * from emp where job not in ('PRESIDENT','ANALYST','SALESMAN');
 
 select * from emp where job='CLARK' and deptno=10;
 
+formatting commands:
+
+select ename " KING" from emp; 
+
+select sal "SALARIES" from emp;
+
+select show "ename",job "DESIGATION" from show;
+
+select  empno,ename,job,sal,sal+100 from show where job='MANAGER';
+
+select empno,ename ,job,sal,(sal+1000)-4500 from show;
+
+select empno, ename, sal ,(sal+100) from show where ename='SCOTT';
+
+select empno,ename,sal,((sal+500)-300)/100 from show;
+
+select empno,ename,sal,(sal*5)/100 from show;
+
+select empno,ename,sal,(sal*8)/100 from show where job='SALESMAN';
+
+select empno,ename,sal,(sal*2)from show;
+
+select empno,ename,sal,(sal*12)"ANNSAL" from show;
+
+select ename ||' '|| ename "Employee" from show;
+
+select ename ||' '|| job "Comp_NAME" from show;
+
+select ename ||'is'||job||'and he is working in Dept No'|| deptno||'since'||hireadate from emp;
+
+select ename,sal,(sal*12)+nvl(comm,0)from show;
+
+select distinct deptno from show;
+
+select distinct deptno,job from show;
+
+select * from show where comm is null and job='MANAGER';
+
+select * from show where comm is not null;
+
+select distinct job from show;
+
+select count(distinct job)from show;
+
+
 
 
 
