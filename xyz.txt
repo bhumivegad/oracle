@@ -1,0 +1,47 @@
+create table rtan
+(emp_id number(2)primary key,
+ emp_name varchar2(10)not null,
+ role varchar2(10)not null,
+salary varchar2(10)not null,
+department varchar2(10)not null,
+contact number(10)
+);
+
+insert into rtan
+(emp_id,emp_name,role,salary,department,contact)
+values(5,'diya','pro.',30000,'IT',5555555555);
+
+
+insert into rtan
+(emp_id,emp_name,role,salary,department,contact)
+values(7,'nish','HR',3000,'manger',4444444444);
+
+insert into rtan
+(emp_id,emp_name,role,salary,department,contact)
+values(8,'nilesh','accountnt',30000,'computer',9999999999);
+
+
+insert into rtan
+(emp_id,emp_name,role,salary,department,contact)
+values(9,'esh','pro',30000,'IT',9999999999);
+
+insert into rtan
+(emp_id,emp_name,role,salary,department,contact)
+values(8,'nilesh','accountnt',30000,'computer',9999999999);
+
+ 
+
+select*from rtan;
+
+select count(*)from ratn;
+select emp_no from ratn;
+describe rtan;
+select department from rtan;
+select role from ratn;
+
+
+
+
+
+
+
