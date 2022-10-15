@@ -149,6 +149,40 @@ select distinct job from show;
 
 select count(distinct job)from show;
 
+//Joins, Subquery, Order by, Group by 
+
+select * from emp order by hiredate desc;
+
+select * from emp order by hiredate asc;
+
+select deptno, dname from dept where deptno>20;
+select * from emp where comm>sal;
+select * from emp where comm<sal;
+select * from emp where sal>=500 and sal<=1500;
+OR
+select * from emp where sal between 500 and 1500;
+select * from emp where mgr in (7902, 7566, 7788);
+select * from emp where mgr between 7788 and 7902;
+select * from emp where ename like 'S%';
+select * from emp where ename='Scott';//
+select * from emp where job='Manager' and length(ename)=5;//
+select * from emp where mgr is null;
+select * from emp where job not like 'A%';
+select * from emp where mgr is not null;
+select * from emp where job in('Manager','Clerk') anddeptno=10;//
+select * from emp where job in('Manager','Salesman') andsal>1500;//
+select job, avg(sal) from emp group by job;
+select job, avg(sal) from emp group by job having job notin('Manager');
+select job,avg(sal),deptno from emp group by job,deptno;
+select deptno,avg(sal),deptno from emp group by deptno;
+select job,sum(sal),avg(sal) from emp group by job having jobnot in('Salesman','Clerk','Manager');
+select loc from emp e , dept d where e.ename = ‘SMITH’ ande.deptno = d.deptno ;//
+select * from emp e ,dept d where (dname = ‘ACCOUNTING’ ordname=’RESEARCH’) and e.deptno = d.deptno order by e.deptnoasc;
+select * from emp where sal > (select sal from emp where ename=‘BLAKE’);//
+select * from emp where job = (select job from emp where ename=‘ALLEN’);//
+select * from emp where hiredate < ( select hiredate from empwhere ename = ‘KING’);//
+
+
 
 
 
